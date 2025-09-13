@@ -1,0 +1,21 @@
+# Exclude minified JavaScript files from language statistics
+*.min.js linguist-vendored
+*.min.mjs linguist-vendored
+
+# Exclude worker files from language statistics  
+*worker*.js linguist-vendored
+*worker*.mjs linguist-vendored
+
+# Exclude vendor/third-party code
+public/pdf.worker.min.mjs linguist-vendored
+
+# Include TypeScript files in language statistics
+*.ts linguist-detectable
+*.tsx linguist-detectable
+
+# Exclude build artifacts
+build/ linguist-generated
+.react-router/ linguist-generated
+
+# Documentation
+*.md linguist-documentation
