@@ -7,6 +7,17 @@ import { useNavigate } from "react-router";
 import { convertPdfToImage } from "~/lib/pdf2img";
 import { generateUUID } from "~/lib/utils";
 import { prepareInstructions } from "../../constants";
+import type { Route } from "./+types/upload";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "RAYNYZE | Upload" },
+    {
+      name: "description",
+      content: "Upload your resume for AI-powered feedback",
+    },
+  ];
+}
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
