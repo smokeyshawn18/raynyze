@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Resumind" },
+    { title: "Raynyze" },
     { name: "description", content: "Smart feedback for your dream job!" },
   ];
 }
@@ -42,7 +42,7 @@ export default function Home() {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1>Track Your Applications & Resume Ratings</h1>
+          <h1 className="">Track Your Applications & Resume Ratings</h1>
           {!loadingResumes && resumes?.length === 0 ? (
             <h2>No resumes found. Upload your first resume to get feedback.</h2>
           ) : (
@@ -57,8 +57,9 @@ export default function Home() {
               className="w-48"
               alt="Loading animation"
             />
-            <p className="mt-6 text-lg text-gray-600">
-              Scanning your resumes...
+            <p className="mt-6 text-lg text-[var(--text-secondary)]">
+              Upload your resume and get instant feedback on how well it matches
+              job requirements.
             </p>
           </div>
         )}
@@ -70,12 +71,12 @@ export default function Home() {
             ))}
             <Link
               to="/upload"
-              className="group relative bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-dashed border-gray-300 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full justify-center items-center p-8"
+              className="group relative bg-[var(--bg-primary)]/80 backdrop-blur-sm rounded-xl shadow-sm border border-dashed border-[var(--border-color)] overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full justify-center items-center p-8"
             >
-              <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+              <div className="w-16 h-16 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center mb-4 group-hover:bg-[var(--border-color)] transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-[var(--color-primary)]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -88,10 +89,10 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                 Add New Resume
               </h3>
-              <p className="text-sm text-gray-500 text-center mt-2">
+              <p className="text-sm text-[var(--text-secondary)] text-center mt-2">
                 Upload a new resume to get AI-powered feedback
               </p>
             </Link>
@@ -99,11 +100,11 @@ export default function Home() {
         )}
 
         {!loadingResumes && resumes?.length === 0 && (
-          <div className="flex flex-col items-center justify-center mt-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-12 max-w-xl mx-auto">
-            <div className="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+          <div className="flex flex-col items-center justify-center mt-16 bg-[var(--bg-primary)]/80 backdrop-blur-sm rounded-2xl shadow-sm p-12 max-w-xl mx-auto">
+            <div className="w-20 h-20 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center mb-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10 text-blue-600"
+                className="h-10 w-10 text-[var(--color-primary)]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -116,10 +117,10 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
               Get Started with Your First Resume
             </h2>
-            <p className="text-gray-600 text-center mb-8">
+            <p className="text-[var(--text-secondary)] text-center mb-8">
               Upload your resume to receive AI-powered analysis and suggestions
               to improve your chances of landing your dream job.
             </p>

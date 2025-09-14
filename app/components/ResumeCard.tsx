@@ -23,6 +23,14 @@ const ResumeCard = ({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // Score-based text color for percentage
+  const getScoreTextColor = (score: number) => {
+    if (score >= 80) return "text-green-600 dark:text-green-400";
+    if (score >= 60) return "text-yellow-600 dark:text-yellow-400";
+    if (score >= 40) return "text-orange-600 dark:text-orange-400";
+    return "text-red-600 dark:text-red-400";
+  };
+
   useEffect(() => {
     const loadResume = async () => {
       setLoading(true);
@@ -50,35 +58,37 @@ const ResumeCard = ({
   return (
     <Link
       to={`/resume/${id}`}
-      className="group relative bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full"
+      className="group relative bg-[var(--bg-primary)] rounded-xl shadow-sm border border-[var(--border-color)] overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full"
     >
       {/* Header with Company and Score */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-100">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-lg font-semibold text-gray-900 truncate">
-            {companyName || "Resume"}
+      <div className="flex items-center justify-between p-4 border-b border-[var(--border-color)]">
+        <div className="flex-1 min-w-0">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] truncate">
+            {companyName || "Untitled Resume"}
           </h2>
-          {jobTitle && (
-            <p className="text-sm text-gray-600 truncate mt-0.5">{jobTitle}</p>
-          )}
+          <p className="text-sm text-[var(--text-secondary)] truncate mt-1">
+            {jobTitle || "No position specified"}
+          </p>
         </div>
-        <div className="ml-3">
+        <div className="ml-3 flex-shrink-0 flex flex-col items-center">
           <ScoreCircle score={feedback.overallScore} />
         </div>
       </div>
 
       {/* Resume Image Container */}
-      <div className="flex-1 bg-gradient-to-b from-gray-50 to-white p-3 flex items-center justify-center">
+      <div className="flex-1 bg-[var(--bg-secondary)] p-4 flex items-center justify-center min-h-[200px]">
         {loading ? (
-          <div className="flex flex-col items-center justify-center p-6 h-64">
-            <div className="w-12 h-12 rounded-full border-4 border-gray-200 border-t-blue-500 animate-spin"></div>
-            <p className="mt-4 text-sm text-gray-500">Loading preview...</p>
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-10 h-10 rounded-full border-3 border-[var(--border-color)] border-t-[var(--color-primary)] animate-spin"></div>
+            <p className="mt-3 text-sm text-[var(--text-secondary)]">
+              Loading preview...
+            </p>
           </div>
         ) : error ? (
-          <div className="flex flex-col items-center justify-center p-6 h-64 bg-gray-50 rounded-lg">
+          <div className="flex flex-col items-center justify-center text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12 text-gray-400"
+              className="h-10 w-10 text-[var(--text-secondary)]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -90,26 +100,25 @@ const ResumeCard = ({
                 d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
               />
             </svg>
-            <p className="mt-3 text-sm text-gray-500">Couldn't load preview</p>
+            <p className="mt-2 text-sm text-[var(--text-secondary)]">
+              Preview unavailable
+            </p>
           </div>
         ) : (
-          <div className="relative w-full h-64 p-1">
-            <div className="absolute inset-0 rounded-lg shadow-inner overflow-hidden">
-              <img
-                src={resumeUrl}
-                alt={`Resume preview for ${companyName || "position"}`}
-                className="w-full h-full object-contain bg-white"
-              />
-            </div>
-            <div className="absolute inset-0 border border-gray-100 rounded-lg pointer-events-none"></div>
+          <div className="relative w-full h-full max-h-[180px] rounded-lg overflow-hidden border border-[var(--border-color)]">
+            <img
+              src={resumeUrl}
+              alt={`Resume preview for ${companyName || "position"}`}
+              className="w-full h-full object-cover bg-[var(--bg-primary)]"
+            />
           </div>
         )}
       </div>
 
-      {/* Footer with View Details */}
-      <div className="mt-auto p-3 text-center border-t border-gray-100">
-        <span className="text-sm font-medium text-blue-600 group-hover:text-blue-800 transition-colors">
-          View Details <span aria-hidden="true">→</span>
+      {/* Footer */}
+      <div className="p-4 text-center border-t border-[var(--border-color)]">
+        <span className="text-sm font-medium text-[var(--color-primary)] group-hover:text-[var(--color-primary-dark)] transition-colors">
+          View Details →
         </span>
       </div>
     </Link>

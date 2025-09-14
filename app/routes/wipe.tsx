@@ -73,7 +73,7 @@ const WipeApp = () => {
                 files.map((file) => (
                   <div
                     key={file.id}
-                    className="flex flex-row gap-4 items-center border-b border-gray-200 pb-2"
+                    className="flex flex-row gap-4 items-center border-b border-[var(--border-color)] pb-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const WipeApp = () => {
                       <line x1="16" y1="17" x2="8" y2="17"></line>
                       <polyline points="10 9 9 9 8 9"></polyline>
                     </svg>
-                    <p className="text-gray-700">{file.name}</p>
+                    <p className="text-[var(--text-primary)]">{file.name}</p>
                   </div>
                 ))
               )}
@@ -101,12 +101,12 @@ const WipeApp = () => {
 
           <div className="mt-6">
             <button
-              className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full cursor-pointer transition-colors"
+              className="bg-[var(--color-secondary)] hover:bg-[var(--color-accent)] text-white px-6 py-3 rounded-full cursor-pointer transition-colors"
               onClick={() => handleDelete()}
             >
               Wipe App Data
             </button>
-            <p className="text-gray-500 mt-2 text-sm">
+            <p className="text-[var(--text-secondary)] mt-2 text-sm">
               This will delete all your files and data from the application.
             </p>
           </div>

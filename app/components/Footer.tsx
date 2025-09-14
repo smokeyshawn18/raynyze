@@ -87,11 +87,11 @@ export const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-3 py-2 rounded-l-md bg-gray-800 border border-gray-700 text-sm focus:outline-none focus:border-indigo-500"
+                className="w-full px-3 py-2 rounded-l-md bg-[var(--bg-secondary)] border border-[var(--border-color)] text-sm focus:outline-none focus:border-[var(--color-primary)]"
               />
               <button
                 type="submit"
-                className="px-4 py-2 text-sm font-medium bg-indigo-600 text-white rounded-r-md hover:bg-indigo-500 transition"
+                className="px-4 py-2 text-sm font-medium bg-[var(--color-primary)] text-white rounded-r-md hover:bg-[var(--color-primary-dark)] transition"
               >
                 Subscribe
               </button>
@@ -100,12 +100,15 @@ export const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-10 border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between">
-          <p className="text-xs text-gray-500">
+        <div className="mt-10 border-t border-[var(--border-color)] pt-6 flex flex-col sm:flex-row items-center justify-between">
+          <p className="text-xs text-[var(--text-secondary)]">
             © {new Date().getFullYear()} RAYNYZE. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
-            <a href="#" className="hover:text-indigo-400 transition-colors">
+            <a
+              href="#"
+              className="hover:text-[var(--color-primary)] transition-colors"
+            >
               <svg
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -115,7 +118,10 @@ export const Footer = () => {
                 <path d="M24 4.6c-...z" />
               </svg>
             </a>
-            <a href="#" className="hover:text-indigo-400 transition-colors">
+            <a
+              href="#"
+              className="hover:text-[var(--color-primary)] transition-colors"
+            >
               <svg
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -125,7 +131,10 @@ export const Footer = () => {
                 <path d="M19.999...z" />
               </svg>
             </a>
-            <a href="#" className="hover:text-indigo-400 transition-colors">
+            <a
+              href="#"
+              className="hover:text-[var(--color-primary)] transition-colors"
+            >
               <svg
                 fill="currentColor"
                 viewBox="0 0 24 24"
