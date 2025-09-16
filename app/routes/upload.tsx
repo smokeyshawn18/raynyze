@@ -11,11 +11,29 @@ import type { Route } from "./+types/upload";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "RAYNYZE | Upload" },
+    { title: "Upload Resume - Raynyze AI Resume Analyzer" },
     {
       name: "description",
-      content: "Upload your resume for AI-powered feedback",
+      content:
+        "Upload your resume to get instant AI-powered feedback, ATS optimization tips, and personalized improvement suggestions. Free resume analysis in seconds.",
     },
+    {
+      name: "keywords",
+      content:
+        "upload resume, resume upload, AI resume analysis, resume checker, ATS scanner, resume feedback",
+    },
+    { name: "robots", content: "index, follow" },
+    {
+      property: "og:title",
+      content: "Upload Resume - Get Instant AI Feedback | Raynyze",
+    },
+    {
+      property: "og:description",
+      content:
+        "Upload your resume and get AI-powered analysis instantly. Improve your resume for better job opportunities.",
+    },
+    { property: "og:url", content: "https://raynyze.com/upload" },
+    { rel: "canonical", href: "https://raynyze.com/upload" },
   ];
 }
 

@@ -6,9 +6,25 @@ import ATS from "~/components/ATS";
 import Details from "~/components/Details";
 import Footer from "~/components/Footer";
 
-export const meta = () => [
-  { title: "RAYNYZE | Review " },
-  { name: "description", content: "Detailed overview of your resume" },
+export const meta = ({ params }: { params: { id: string } }) => [
+  { title: `Resume Analysis - ${params.id} | Raynyze AI Resume Analyzer` },
+  {
+    name: "description",
+    content:
+      "View detailed AI-powered resume analysis including ATS compatibility, scoring, and personalized improvement recommendations.",
+  },
+  {
+    name: "keywords",
+    content:
+      "resume analysis, resume feedback, ATS score, resume review, job application analysis",
+  },
+  { name: "robots", content: "noindex, nofollow" }, // Private resume data
+  { property: "og:title", content: "Resume Analysis Results | Raynyze" },
+  {
+    property: "og:description",
+    content:
+      "Detailed AI-powered resume analysis with actionable feedback and ATS optimization tips.",
+  },
 ];
 
 const Resume = () => {

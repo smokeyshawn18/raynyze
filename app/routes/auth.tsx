@@ -3,8 +3,17 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
 
 export const meta = () => [
-  { title: "RAYNYZE | Auth" },
-  { name: "description", content: "Log into your account" },
+  { title: "Login - Raynyze AI Resume Analyzer" },
+  {
+    name: "description",
+    content:
+      "Login to access your Raynyze account and manage your resume analysis history. Secure authentication for personalized resume feedback.",
+  },
+  {
+    name: "keywords",
+    content: "login, signin, account access, resume analyzer login",
+  },
+  { name: "robots", content: "noindex, nofollow" }, // Auth pages shouldn't be indexed
 ];
 
 const Auth = () => {

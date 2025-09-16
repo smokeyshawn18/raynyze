@@ -7,8 +7,50 @@ import { useEffect, useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Raynyze" },
-    { name: "description", content: "Smart feedback for your dream job!" },
+    { title: "Raynyze - AI Resume Analyzer | Get Instant Resume Feedback" },
+    {
+      name: "description",
+      content:
+        "Raynyze is an AI-powered resume analyzer that provides instant feedback and ATS optimization. Upload your resume and get personalized suggestions to land your dream job. Free resume analysis tool.",
+    },
+    {
+      name: "keywords",
+      content:
+        "resume analyzer, AI resume checker, ATS optimization, resume feedback, job application, career tools, resume scanner, CV analyzer, resume tips, job search",
+    },
+    { name: "author", content: "Raynyze Team" },
+    { name: "robots", content: "index, follow" },
+    {
+      property: "og:title",
+      content: "Raynyze - AI Resume Analyzer | Get Instant Resume Feedback",
+    },
+    {
+      property: "og:description",
+      content:
+        "Upload your resume and get AI-powered feedback instantly. Optimize for ATS systems and improve your chances of landing interviews.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://raynyze.com" },
+    {
+      property: "og:image",
+      content: "https://raynyze.com/images/og-image.png",
+    },
+    { property: "og:site_name", content: "Raynyze" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Raynyze - AI Resume Analyzer" },
+    {
+      name: "twitter:description",
+      content: "Get instant AI-powered resume feedback and ATS optimization",
+    },
+    {
+      name: "twitter:image",
+      content: "https://raynyze.com/images/twitter-card.png",
+    },
+    { name: "theme-color", content: "#6366f1" },
+    { name: "apple-mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+    { name: "apple-mobile-web-app-title", content: "Raynyze" },
+    { rel: "canonical", href: "https://raynyze.com" },
   ];
 }
 
@@ -42,7 +84,7 @@ export default function Home() {
 
       <section className="main-section">
         <div className="page-heading py-16">
-          <h1 className="">Track Your Applications & Resume Ratings</h1>
+          <h1>Track Your Applications & Resume Ratings</h1>
           {!loadingResumes && resumes?.length === 0 ? (
             <h2>No resumes found. Upload your first resume to get feedback.</h2>
           ) : (
@@ -58,8 +100,10 @@ export default function Home() {
               alt="Loading animation"
             />
             <p className="mt-6 text-lg text-[var(--text-secondary)]">
-              Upload your resume and get instant feedback on how well it matches
-              job requirements.
+              Raynyze uses advanced AI to analyze your resume for ATS
+              compatibility, keyword optimization, and formatting best
+              practices. Get personalized feedback to improve your chances of
+              landing interviews.
             </p>
           </div>
         )}
