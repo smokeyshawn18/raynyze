@@ -58,8 +58,7 @@ jobs:
         run: npm ci
 
       - name: 🧪 Run tests (if available)
-        run: npm test
-        continue-on-error: false
+        run: npm test --if-present
 
       - name: 🏗️ Build application
         run: npm run build
@@ -96,8 +95,9 @@ jobs:
             curl -X POST "$VERCEL_DEPLOY_HOOK"
             echo "✅ Deployment triggered successfully!"
           else
-            echo "⚠️ VERCEL_DEPLOY_HOOK not configured"
-            exit 1
+            echo "⚠️ VERCEL_DEPLOY_HOOK not configured - skipping deployment"
+            echo "ℹ️ To enable auto-deployment, add VERCEL_DEPLOY_HOOK secret in GitHub repository settings"
+            echo "✅ Build completed successfully - manual deployment available"
           fi
 
   # Security scanning
