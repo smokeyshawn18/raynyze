@@ -1,0 +1,10 @@
+app/
+types/
+constants/
+*.ts
+*.tsx
+*.config.js
+*.config.ts
+build/
+dist/
+node_modules/
