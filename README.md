@@ -1,76 +1,250 @@
+# 🚀 Raynyze - AI Resume Analyzer
+
+[![CI/CD Pipeline](https://github.com/smokeyshawn18/raynyze/actions/workflows/ci.yml/badge.svg)](https://github.com/smokeyshawn18/raynyze/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
 <div align="center">
   <br />
-    <a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank">
-      <img src="public/readme/hero.webp" alt="Project Banner">
+    <a href="https://raynyze.vercel.app" target="_blank">
+      <img src="public/readme/hero.webp" alt="Raynyze - AI Resume Analyzer">
     </a>
   <br />
-
-  <div>
-    <img alt="Static Badge" src="https://img.shields.io/badge/React-4c84f3?style=for-the-badge&logo=react&logoColor=white">
-        <img src="https://img.shields.io/badge/-Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-        <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
-    <img alt="Static Badge" src="https://img.shields.io/badge/Puter.js-181758?style=for-the-badge&logoColor=white">
-  </div>
-
-  <h3 align="center">AI Resume Analyzer</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/watch?v=XUkNR-JfHwo" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## ✨ Introduction
 
-1. ✨ [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
+Raynyze is an AI-powered resume analyzer that provides instant feedback, ATS optimization, and personalized improvement suggestions to help you land your dream job. Built with React Router v7, TypeScript, and modern web technologies.
 
-## 🚨 Tutorial
+## ⚙️ Tech Stack
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+- **[React Router v7](https://reactrouter.com/)** - Full-stack React framework
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Vite](https://vitejs.dev/)** - Fast build tool
+- **[Puter.js](https://puter.com/)** - Cloud storage and AI services
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+## 🔋 Features
 
-<a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+👉 **Smart Resume Analysis**: AI-powered scoring and feedback system
+👉 **ATS Optimization**: Check compatibility with Applicant Tracking Systems  
+👉 **Real-time Processing**: Instant feedback and score calculation
+👉 **File Management**: Secure upload and storage with Puter.js
+👉 **Responsive Design**: Works perfectly on all devices
+👉 **Clean UI/UX**: Modern purple/blue theme with smooth animations
+👉 **Type Safety**: Full TypeScript implementation
+👉 **SEO Optimized**: Complete meta tags, Open Graph, and sitemap
 
-## <a name="introduction">✨ Introduction</a>
+## 🚀 Quick Start
 
-Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Implement seamless auth, upload and store resumes, and match candidates to jobs using smart AI evaluations. Get custom feedback and ATS scores tailored to each listing—all wrapped in a clean, reusable UI.
+Follow these steps to set up the project locally on your machine.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
+### Prerequisites
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+Make sure you have the following installed:
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
 
-- **[React](https://react.dev/)** is a popular open‑source JavaScript library for building user interfaces using reusable components and a virtual DOM, enabling efficient, dynamic single-page and native apps.
+### Installation
 
-- **[React Router v7](https://reactrouter.com/)** is the go‑to routing library for React apps, offering nested routes, data loaders/actions, error boundaries, code splitting, and SSR support—all with a smooth upgrade path from v6.
+1. **Clone the repository**
 
-- **[Puter.com](https://jsm.dev/resumind-puter)** is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as: A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
+```bash
+git clone https://github.com/smokeyshawn18/raynyze.git
+cd raynyze
+```
 
-- **[Puter.js](https://jsm.dev/resumind-puterjs)** is a tiny client‑side SDK that adds serverless auth, storage, database, and AI (GPT, Claude, DALL·E, OCR…) straight into your browser app—no backend needed and costs borne by users.
+2. **Install dependencies**
 
-- **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework that allows developers to design custom user interfaces by applying low-level utility classes directly in HTML, streamlining the design process.
+```bash
+npm install
+```
 
-- **[TypeScript](https://www.typescriptlang.org/)** is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection for developers, making it ideal for building large-scale applications.
+3. **Set up environment variables**
 
-- **[Vite](https://vite.dev/)** is a fast build tool and dev server using native ES modules for instant startup, hot‑module replacement, and Rollup‑powered production builds—perfect for modern web development.
+Create a `.env` file in the root directory:
 
-- **[Zustand](https://github.com/pmndrs/zustand)** is a minimal, hook-based state management library for React. It lets you manage global state with zero boilerplate, no context providers, and excellent performance through selective state subscriptions.
+```env
+# Puter.js Configuration (required for file storage and AI features)
+VITE_PUTER_DOMAIN=api.puter.com
+VITE_PUTER_SUBDOMAIN=your-app-subdomain
 
-## <a name="features">🔋 Features</a>
+# Add any additional environment variables here
+```
 
-👉 **Easy & convenient auth**: Handle authentication entirely in the browser using Puter.js—no backend or setup required.
+4. **Start the development server**
 
-👉 **Resume upload & storage**: Let users upload and store all their resumes in one place, safely and reliably.
+```bash
+npm run dev
+```
 
-👉 **AI resume matching**: Provide a job listing and get an ATS score with custom feedback tailored to each resume.
+5. **Open your browser**
 
-👉 **Reusable, modern UI**: Built with clean, consistent components for a great-looking and maintainable interface.
+Visit [http://localhost:5173](http://localhost:5173) to view the application.
+
+## 🛠️ Development Workflow
+
+### Available Scripts
+
+```bash
+# Development
+npm run dev          # Start development server with HMR
+npm run dev:debug    # Start development server with debugging
+
+# Building
+npm run build        # Build for production
+npm run preview      # Preview production build locally
+
+# Type Checking
+npm run typecheck    # Run TypeScript type checking
+npm run typecheck:watch # Watch mode for type checking
+
+# Code Quality
+npm run lint         # Run ESLint
+npm run lint:fix     # Auto-fix ESLint issues
+npm run format       # Format code with Prettier
+
+# Testing
+npm test            # Run tests (when implemented)
+
+# Utility
+npm run clean       # Clean build artifacts
+```
+
+### Code Quality
+
+This project uses:
+
+- **ESLint** for code linting with React and TypeScript rules
+- **TypeScript** for type safety and better developer experience
+- **Prettier** for consistent code formatting (recommended)
+
+### CI/CD Pipeline
+
+Our GitHub Actions workflow includes:
+
+1. **Quality Gate**: ESLint, TypeScript checking, formatting validation
+2. **Build & Test**: Production build verification and test execution
+3. **Deploy**: Automatic deployment to Vercel on successful builds
+4. **Security**: Dependency vulnerability scanning
+
+## 📁 Project Structure
+
+```
+raynyze/
+├── app/                    # Application source code
+│   ├── components/         # Reusable React components
+│   ├── lib/               # Utilities and helpers
+│   ├── routes/            # Route components
+│   ├── app.css           # Global styles and CSS variables
+│   ├── root.tsx          # Root component with SEO meta
+│   └── routes.ts         # Route definitions
+├── build/                 # Production build output
+├── constants/             # Application constants
+├── public/               # Static assets
+├── types/                # TypeScript type definitions
+├── .github/workflows/    # CI/CD configuration
+├── package.json          # Dependencies and scripts
+├── tsconfig.json        # TypeScript configuration
+└── vite.config.ts       # Vite build configuration
+```
+
+## 🎨 Styling & Theming
+
+The application uses a modern purple/blue color scheme with CSS custom properties:
+
+```css
+:root {
+  --color-primary: #6366f1; /* Indigo */
+  --color-secondary: #8b5cf6; /* Violet */
+  --color-accent: #06b6d4; /* Cyan */
+  --color-background: #f8fafc; /* Slate 50 */
+  --color-surface: #ffffff; /* White */
+}
+```
+
+All components use Tailwind CSS utilities for consistent styling.
+
+## 🔧 Configuration Files
+
+### TypeScript Configuration
+
+The project uses strict TypeScript settings for better code quality:
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  }
+}
+```
+
+### ESLint Configuration
+
+Custom ESLint rules for React and TypeScript:
+
+```json
+{
+  "extends": [
+    "@eslint/js/recommended",
+    "@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ]
+}
+```
+
+## � Deployment
+
+### Vercel Deployment (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
+
+### Manual Deployment
+
+```bash
+npm run build
+# Upload build/ directory to your hosting provider
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write meaningful commit messages
+- Add TypeScript types for all new code
+- Test your changes thoroughly
+- Update documentation as needed
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [React Router](https://reactrouter.com/) for the amazing full-stack framework
+- [Puter.js](https://puter.com/) for cloud services and AI capabilities
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first approach
+- [Vercel](https://vercel.com/) for seamless deployment
+
+---
+
+<div align="center">
+  Made with ❤️ by the Raynyze team
+</div>
 
 👉 **Code Reusability**: Leverage reusable components and a modular codebase for efficient development.
 
