@@ -27,13 +27,6 @@
   --color-text-muted-light: #64748b;
   --color-border-light: #e2e8f0;
 
-  /* Dark Theme - Deep Blue */
-  --color-bg-dark: #0f172a;
-  --color-surface-dark: #1e293b;
-  --color-text-dark: #f1f5f9;
-  --color-text-muted-dark: #94a3b8;
-  --color-border-dark: #334155;
-
   --color-badge-green: #d5faf1;
   --color-badge-red: #f9e3e2;
   --color-badge-yellow: #fceed8;
@@ -41,11 +34,6 @@
   --color-badge-green-text: #254d4a;
   --color-badge-red-text: #752522;
   --color-badge-yellow-text: #73321b;
-
-  /* Dark mode badge colors */
-  --color-badge-green-dark: #065f46;
-  --color-badge-red-dark: #7f1d1d;
-  --color-badge-yellow-dark: #78350f;
 }
 
 /* CSS Variables for theming */
@@ -57,17 +45,11 @@
   --border-color: var(--color-border-light);
 }
 
-[data-theme="dark"] {
-  --bg-primary: var(--color-bg-dark);
-  --bg-secondary: var(--color-surface-dark);
-  --text-primary: var(--color-text-dark);
-  --text-secondary: var(--color-text-muted-dark);
-  --border-color: var(--color-border-dark);
-}
-
 html,
 body {
-  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: none;
 }
 
 main {
@@ -167,7 +149,7 @@ form {
   }
 
   .theme-toggle {
-    @apply p-2 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-color)] text-[var(--text-primary)] hover:bg-[var(--border-color)] transition-colors cursor-pointer;
+    display: none; /* Hidden since no dark mode */
   }
 
   .auth-nav-button {

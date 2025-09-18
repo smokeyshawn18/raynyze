@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Menu, X } from "lucide-react"; // icons for mobile menu
 import { usePuterStore } from "~/lib/puter";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { auth, isLoading } = usePuterStore();
@@ -18,7 +17,6 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <ThemeToggle />
           <Link to="/upload" className="primary-button w-fit">
             Upload Resume
           </Link>
